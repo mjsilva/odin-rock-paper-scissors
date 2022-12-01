@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <section class="top-bar">
@@ -29,5 +30,14 @@
         </div>
       </div>
     </section>
+    <section class="results">
+      <div class="result human blink hide">Winner</div>
+      <div class="result computer blink hide">Loser</div>
+    </section>
+    <div class="round-options-modal hide">
+      <button class="button secondary bto-restart-game">Restart</button>
+      <button class="button primary bto-next-game">Next Round</button>
+    </div>
+    <div class="page-mask hide"></div>
   </body>
 </html>
