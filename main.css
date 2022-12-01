@@ -21,6 +21,14 @@ body {
   background-color: #242424de;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 .top-bar {
   display: flex;
   align-content: center;
@@ -77,4 +85,67 @@ body {
 .game .human .play-card:hover {
   cursor: pointer;
   background-color: #857e7ea7;
+}
+
+.results {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Minecraft-Regular";
+  background-color: #6f6f6fde;
+  color: #ff5e32fc;
+  font-size: 6vw;
+  text-transform: uppercase;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.round-options-modal {
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  padding: 4vw 5vw;
+  display: flex;
+  gap: 3vw;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #9e9e9e;
+  z-index: 10;
+}
+
+.button {
+  background-color: #fff;
+  font-size: 3vw;
+  border: 0;
+  border-radius: 10px;
+  padding: 1vw 3vw;
+  white-space: nowrap;
+}
+
+.button.primary {
+  background-color: #fcaa31;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
